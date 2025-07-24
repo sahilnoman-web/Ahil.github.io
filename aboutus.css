@@ -1,0 +1,199 @@
+/* Base styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Snowfall canvas full background */
+#snowfall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Container styling */
+.about-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+.about-header .logo {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #e55139;
+  box-shadow: 0 0 20px #e55139;
+  transition: transform 0.5s ease, box-shadow 0.5s;
+  margin-top: 20px;
+}
+.about-header .logo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #3944e5;
+}
+
+/* Glowing heading */
+.animated-heading {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #e55139, 0 0 20px #e55139;
+  animation: glowText 3s ease-in-out infinite alternate;
+  margin-top: 10px;
+}
+
+/* tagline */
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 10px 0 30px;
+}
+
+/* Content styling */
+.about-content {
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.about-content h2 {
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffd700;
+  margin-top: 30px;
+}
+.about-content ul {
+  padding-left: 20px;
+}
+.about-content li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.05);
+  border-top: 1px solid #333;
+}
+.footer p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* YouTube logo */
+.yt-logo {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  cursor: pointer;
+}
+.yt-logo:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px red);
+}
+
+/* Glowing text animation */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px #e55139;
+  }
+  100% {
+    text-shadow: 0 0 20px #3944e5;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .animated-heading {
+    font-size: 2rem;
+  }
+
+  .about-header .logo {
+    height: 150px;
+    width: 150px;
+  }
+}
+.yt-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  padding: 5px;
+  box-shadow: 0 0 10px #ff0000;
+  animation: borderGlow 2s linear infinite, pulseZoom 5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover zoom effect */
+.yt-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Border glowing loop */
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+  }
+}
+
+/* Pulse in-out slow effect like breathing */
+@keyframes pulseZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+@media (max-width: 480px) {
+  .about-container {
+    padding: 10px;
+  }
+
+  .about-header .logo {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+  }
+
+  .animated-heading {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .about-content {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .yt-logo {
+    width: 50px;
+    height: 50px;
+  }
+}

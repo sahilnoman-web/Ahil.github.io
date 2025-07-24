@@ -1,0 +1,363 @@
+/* General */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  background-color: #0b0c10;
+  color: #fff;
+  position: relative;
+}
+
+/* Snowfall canvas */
+#snowfall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Header */
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-height: 120px;
+  margin-right: 20px;
+}
+
+.animated-heading {
+  font-size: 2.5rem;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+  animation: glowBlink 2s infinite alternate;
+}
+
+@keyframes glowBlink {
+  0% { text-shadow: 0 0 10px #00eaff; }
+  100% { text-shadow: 0 0 20px #ffffff; }
+}
+
+.tagline {
+  color: #ffd700;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.poster {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 15px 0;
+}
+
+.quote {
+  font-size: 1.5rem;
+  color: #00f5c4;
+  text-shadow: 0 0 10px #00f5c4;
+}
+
+/* Navigation */
+.nav-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* Sections */
+.section h2,
+.contact h2 {
+  font-size: 2rem;
+  color: #39f;
+  margin-top: 30px;
+}
+
+.glow-heading {
+  color: #00f5c4;
+  text-shadow: 0 0 10px #00f5c4;
+}
+
+.services li {
+  list-style: none;
+  margin: 8px 0;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, color 0.3s;
+}
+
+.services li:hover {
+  color: #4cc9f0;
+  transform: scale(1.1);
+}
+
+/* Contact */
+.contact a {
+  color: #ffd60a;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  color: #ccc;
+}
+
+footer a {
+  color: #4cc9f0;
+}
+/* Logo Styling */
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #4cc9f0;
+  object-fit: cover;
+  box-shadow: 0 0 20px #4cc9f0;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  border-color: #ffd60a;
+  box-shadow: 0 0 25px #ffd60a;
+  cursor: pointer;
+}
+
+
+/* Poster Image Styling */
+.poster {
+  display: block;
+  margin: 25px auto;
+  border: 5px solid #90e0ef;
+  border-radius: 12px;
+  transition: transform 0.4s ease, border-color 0.4s, box-shadow 0.4s;
+  box-shadow: 0 0 20px #4cc9f0;
+}
+.poster:hover {
+  transform: scale(1.05);
+  border-color: #ffd60a;
+  box-shadow: 0 0 30px #ffd60a;
+  cursor: zoom-in;
+}
+.poster {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto;
+  border: 5px solid #90e0ef;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #4cc9f0;
+  transition: transform 0.4s ease, border-color 0.4s, box-shadow 0.4s;
+  object-fit: contain; /* ensure image doesn't crop */
+}
+
+.poster:hover {
+  transform: scale(1.05);
+  border-color: #ffd60a;
+  box-shadow: 0 0 30px #ffd60a;
+  cursor: zoom-in;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+.services li {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.3rem;
+  color: #e0f7fa;
+  text-shadow: 0 0 4px #4cc9f0;
+  margin: 10px 0;
+  list-style-type: square;
+  transition: all 0.3s ease;
+}
+
+.services li:hover {
+  color: #ffd60a;
+  text-shadow: 0 0 10px #ffd60a, 0 0 15px #ffd60a;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.yt-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.yt-logo:hover {
+  transform: scale(1.1);
+  border-color: #fff;
+  box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+}
+.yt-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #ff0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  transition: all 0.5s ease;
+  animation: glowPulse 3s infinite, borderSlide 4s linear infinite;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* Hover effect - enlarge and change border color */
+.yt-logo:hover {
+  transform: scale(1.15);
+  border-color: #ffffff;
+  box-shadow: 0 0 20px #fff, 0 0 40px #ff0000, 0 0 60px #ff0000;
+}
+
+/* Glow + Pulse animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffff, 0 0 30px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0000;
+  }
+}
+
+/* Border shine slide effect like a moving train light */
+@keyframes borderSlide {
+  0% {
+    border-color: #ff0000;
+  }
+  25% {
+    border-color: #ffffff;
+  }
+  50% {
+    border-color: #ff0000;
+  }
+  75% {
+    border-color: #ffffff;
+  }
+  100% {
+    border-color: #ff0000;
+  }
+}
+/* === Responsive Design === */
+@media (max-width: 1200px) {
+  .logo {
+    height: 150px;
+  }
+  .poster {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .animated-heading {
+    font-size: 32px;
+    text-align: center;
+  }
+  .quote {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  .services li {
+    font-size: 16px;
+  }
+  .yt-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 100px;
+  }
+  .poster {
+    width: 100%;
+    height: auto;
+  }
+  .animated-heading {
+    font-size: 26px;
+  }
+  .tagline {
+    font-size: 14px;
+  }
+  .glow-heading {
+    font-size: 20px;
+  }
+  .contact p, .section p, .services li {
+    font-size: 14px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 80px;
+  }
+  .yt-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .animated-heading {
+    font-size: 22px;
+  }
+  .quote {
+    font-size: 14px;
+  }
+  .nav-links a {
+    font-size: 16px;
+  }
+  .glow-heading {
+    font-size: 18px;
+  }
+  .services li {
+    font-size: 13px;
+  }
+}
